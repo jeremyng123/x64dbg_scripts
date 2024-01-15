@@ -48,7 +48,6 @@ def readchunkbytesfromIdaBE(exportedbytes):
 # Retrieve symbols
 def retrievesymbols(addresses):
     MAX_SIZE = 256
-    symbol.GetList
     for addr in addresses:
         label_text = ctypes.create_string_buffer(MAX_SIZE)
         x64dbg.DbgGetLabelAt(int(addr,16), x64dbg.SEG_DEFAULT, label_text)
